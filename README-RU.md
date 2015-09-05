@@ -1,9 +1,9 @@
-Alternative yii\grid\ActionColumn for yii2
+Альтернативный yii\grid\ActionColumn для yii2
 =================================
 
-[Russian readme](https://github.com/microinginer/yii2-dropdown-action-column/blob/master/README-RU.md)
+[English readme](https://github.com/microinginer/yii2-dropdown-action-column/blob/master/README.md)
 
-##Default buttons
+##Настройки по умолчанию
 
 ```php
 echo \yii\grid\GridView::widget([
@@ -17,10 +17,10 @@ echo \yii\grid\GridView::widget([
 ]);
 ```
 
-![alternative yii\grid\ActionColumn default buttons](https://raw.githubusercontent.com/microinginer/yii2-dropdown-action-column/master/screenshots/default-buttons.png "alternative yii\grid\ActionColumn default buttons")
+![аналог yii\grid\ActionColumn дефолтные настройки](https://raw.githubusercontent.com/microinginer/yii2-dropdown-action-column/master/screenshots/default-buttons.png "аналог yii\grid\ActionColumn дефолтные настройки")
 
 
-##Custom buttons
+##Переопределенные кнопки
 
 ```php
 echo \yii\grid\GridView::widget([
@@ -51,22 +51,23 @@ echo \yii\grid\GridView::widget([
 ]);
 ```
 
-![alternative yii\grid\ActionColumn custom buttons](https://raw.githubusercontent.com/microinginer/yii2-dropdown-action-column/master/screenshots/custom-buttons.png "alternative yii\grid\ActionColumn custom buttons")
+![аналог yii\grid\ActionColumn](https://raw.githubusercontent.com/microinginer/yii2-dropdown-action-column/master/screenshots/custom-buttons.png "аналог yii\grid\ActionColumn")
 
 
 ##Install
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+Предпочтительный способ установки [composer](http://getcomposer.org/download/).
 
-Either run
+Запустите комманду
 
 ```
 php composer.phar require --prefer-dist microinginer/yii2-dropdown-action-column "dev-master"
 ```
 
-or add
+или добавте
 
 ```json
 "microinginer/yii2-dropdown-action-column": "dev-master"
 ```
-to the require section of your composer.json file.
+
+в раздел `require` в вашем composer.json файле.
