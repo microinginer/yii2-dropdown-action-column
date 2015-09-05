@@ -1,9 +1,9 @@
-Альтернативный yii\grid\ActionColumn для yii2
+РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№ yii\grid\ActionColumn РґР»СЏ yii2
 =================================
 
 [English readme](https://github.com/microinginer/yii2-dropdown-action-column/blob/master/README.md)
 
-##Настройки по умолчанию
+##РќР°СЃС‚СЂРѕР№РєРё РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 
 ```php
 echo \yii\grid\GridView::widget([
@@ -17,10 +17,10 @@ echo \yii\grid\GridView::widget([
 ]);
 ```
 
-![аналог yii\grid\ActionColumn дефолтные настройки](https://raw.githubusercontent.com/microinginer/yii2-dropdown-action-column/master/screenshots/default-buttons.png "аналог yii\grid\ActionColumn дефолтные настройки")
+![Р°РЅР°Р»РѕРі yii\grid\ActionColumn РґРµС„РѕР»С‚РЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё](https://raw.githubusercontent.com/microinginer/yii2-dropdown-action-column/master/screenshots/default-buttons.png "Р°РЅР°Р»РѕРі yii\grid\ActionColumn РґРµС„РѕР»С‚РЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё")
 
 
-##Переопределенные кнопки
+##РџРµСЂРµРѕРїСЂРµРґРµР»РµРЅРЅС‹Рµ РєРЅРѕРїРєРё
 
 ```php
 echo \yii\grid\GridView::widget([
@@ -51,23 +51,23 @@ echo \yii\grid\GridView::widget([
 ]);
 ```
 
-![аналог yii\grid\ActionColumn](https://raw.githubusercontent.com/microinginer/yii2-dropdown-action-column/master/screenshots/custom-buttons.png "аналог yii\grid\ActionColumn")
+![Р°РЅР°Р»РѕРі yii\grid\ActionColumn](https://raw.githubusercontent.com/microinginer/yii2-dropdown-action-column/master/screenshots/custom-buttons.png "Р°РЅР°Р»РѕРі yii\grid\ActionColumn")
 
 
 ##Install
 
-Предпочтительный способ установки [composer](http://getcomposer.org/download/).
+РџСЂРµРґРїРѕС‡С‚РёС‚РµР»СЊРЅС‹Р№ СЃРїРѕСЃРѕР± СѓСЃС‚Р°РЅРѕРІРєРё [composer](http://getcomposer.org/download/).
 
-Запустите комманду
+Р—Р°РїСѓСЃС‚РёС‚Рµ РєРѕРјРјР°РЅРґСѓ
 
 ```
 php composer.phar require --prefer-dist microinginer/yii2-dropdown-action-column "dev-master"
 ```
 
-или добавте
+РёР»Рё РґРѕР±Р°РІС‚Рµ
 
 ```json
 "microinginer/yii2-dropdown-action-column": "dev-master"
 ```
 
-в раздел `require` в вашем composer.json файле.
+РІ СЂР°Р·РґРµР» `require` РІ РІР°С€РµРј composer.json С„Р°Р№Р»Рµ.
