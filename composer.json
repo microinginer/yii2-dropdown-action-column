@@ -1,5 +1,5 @@
 {
-    "name": "microinginer/yii2-human-formatter",
+    "name": "microinginer/yii2-dropdown-action-column",
     "keywords": ["yii2", "actionColumn", "gridview", "buttons", "dropDown", "dropDownButtons"],
     "homepage": "https://github.com/microinginer/yii2-dropdown-action-column",
     "type": "yii2-extensions",
