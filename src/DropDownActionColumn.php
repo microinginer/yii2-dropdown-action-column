@@ -6,7 +6,7 @@
  * Time: 17:55
  */
 
-namespace app\components;
+namespace microinginer\dropDownActionColumn;
 
 
 use Yii;

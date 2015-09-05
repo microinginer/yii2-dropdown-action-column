@@ -1,0 +1,26 @@
+{
+    "name": "microinginer/yii2-human-formatter",
+    "keywords": ["yii2", "actionColumn", "gridview", "buttons", "dropDown", "dropDownButtons"],
+    "homepage": "https://github.com/microinginer/yii2-dropdown-action-column",
+    "type": "yii2-extensions",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "inginer",
+            "email": "inginer.r@gmail.com"
+        },
+        {
+            "name": "gir3li",
+            "email": "uzep@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "microinginer\\dropDownActionColumn\\": "src/"
+        }
+    }
+}
