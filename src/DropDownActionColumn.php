@@ -80,7 +80,10 @@ class DropDownActionColumn extends Column
                 ],
                 [
                     'label' => Yii::t('yii', 'Delete'),
-                    'url'   => ['delete']
+                    'url'   => ['delete'],
+                    'linkOptions' => [
+                        'data-method' => 'post'
+                    ],
                 ],
             ];
         }
