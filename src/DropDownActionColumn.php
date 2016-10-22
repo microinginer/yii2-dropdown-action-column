@@ -85,7 +85,7 @@ class DropDownActionColumn extends Column
             ];
         }
 
-        $firstKey = reset(array_keys($this->items));
+        $firstKey = current(array_keys($this->items));
         $mainBtn = $this->items[ $firstKey ];
 
         $result .= Html::a($mainBtn['label'], array_merge($mainBtn['url'], [$model->primaryKey()[0] => $key]), array_merge(
