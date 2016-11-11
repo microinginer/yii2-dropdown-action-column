@@ -45,6 +45,9 @@ class DropDownActionColumn extends Column
 
     ];
 
+    public $visibleButtons = [];
+
+
     /**
      * @var bool
      */
@@ -110,21 +113,31 @@ class DropDownActionColumn extends Column
             $items = '';
             $firstElement = true;
 
-            foreach ($this->items as $item) {
+            foreach ($this->items as $itemIndex => $item) {
 
-                if ($firstElement) {
-                    $firstElement = false;
-                    continue;
+                if (isset($this->visibleButtons[$itemIndex])) {
+                    $isVisible = $this->visibleButtons[$itemIndex] instanceof \Closure
+                        ? call_user_func($this->visibleButtons[$itemIndex], $model, $key, $index)
+                        : $this->visibleButtons[$itemIndex];
+                } else {
+                    $isVisible = true;
                 }
+                if($isVisible){
 
-                $items .= Html::tag(
-                    'li',
-                    Html::a(
-                        $item['label'],
-                        array_merge($item['url'], [$model->primaryKey()[0] => $key]),
-                        (isset($item['linkOptions']) ? $item['linkOptions'] : [])
-                    ),
-                    (isset($item['options']) ? $item['options'] : []));
+                    if ($firstElement) {
+                        $firstElement = false;
+                        continue;
+                    }
+
+                    $items .= Html::tag(
+                        'li',
+                        Html::a(
+                            $item['label'],
+                            array_merge($item['url'], [$model->primaryKey()[0] => $key]),
+                            (isset($item['linkOptions']) ? $item['linkOptions'] : [])
+                        ),
+                        (isset($item['options']) ? $item['options'] : []));
+                }
             }
             $result .= Html::tag('ul', $items, ['class' => 'dropdown-menu dropdown-menu-right']);
         }
