@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: inginer
- * Date: 03.09.15
- * Time: 17:55
- */
 
 namespace microinginer\dropDownActionColumn;
 
@@ -13,9 +7,10 @@ use Yii;
 use yii\grid\Column;
 use yii\helpers\Html;
 
+
 /**
  * Class DropDownActionColumn
- * @package app\components
+ * @package microinginer\dropDownActionColumn
  */
 class DropDownActionColumn extends Column
 {
@@ -58,7 +53,7 @@ class DropDownActionColumn extends Column
      * This method is invoked at the end of the constructor after the object is initialized with the
      * given configuration.
      */
-    public function init ()
+    public function init()
     {
         $this->defaultItems = !$this->items;
         parent::init();
@@ -67,7 +62,7 @@ class DropDownActionColumn extends Column
     /**
      * @inheritdoc
      */
-    protected function renderDataCellContent ($model, $key, $index)
+    protected function renderDataCellContent($model, $key, $index)
     {
         $result = '';
 
@@ -75,24 +70,33 @@ class DropDownActionColumn extends Column
             $this->items = [
                 [
                     'label' => Yii::t('yii', 'Update'),
-                    'url'   => ['update']
+                    'url' => ['update'],
+                    'visible' => true,
                 ],
                 [
                     'label' => Yii::t('yii', 'View'),
-                    'url'   => ['view']
+                    'url' => ['view'],
+                    'visible' => true,
                 ],
                 [
                     'label' => Yii::t('yii', 'Delete'),
-                    'url'   => ['delete'],
+                    'url' => ['delete'],
                     'linkOptions' => [
                         'data-method' => 'post'
                     ],
+                    'visible' => true,
                 ],
             ];
         }
 
+        foreach ($this->items as $key => $value) {
+            if (isset($value['visible']) && false === $value['visible']) {
+                unset($this->items[$key]);
+            }
+        }
+
         $firstKey = current(array_keys($this->items));
-        $mainBtn = $this->items[ $firstKey ];
+        $mainBtn = $this->items[$firstKey];
 
         $result .= Html::a($mainBtn['label'], array_merge($mainBtn['url'], [$model->primaryKey()[0] => $key]), array_merge(
                 ['class' => 'btn btn-default btn-sm'],
@@ -103,8 +107,8 @@ class DropDownActionColumn extends Column
             $result .= Html::button(
                 Html::tag('span', '', ['class' => 'caret']) .
                 Html::tag('span', 'Toggle Dropdown', ['class' => 'sr-only']), [
-                    'class'         => 'btn btn-default btn-sm dropdown-toggle',
-                    'data-toggle'   => 'dropdown',
+                    'class' => 'btn btn-default btn-sm dropdown-toggle',
+                    'data-toggle' => 'dropdown',
                     'aria-haspopup' => 'true',
                     'aria-expanded' => 'false',
                 ]
@@ -122,7 +126,7 @@ class DropDownActionColumn extends Column
                 } else {
                     $isVisible = true;
                 }
-                if($isVisible){
+                if ($isVisible) {
 
                     if ($firstElement) {
                         $firstElement = false;
