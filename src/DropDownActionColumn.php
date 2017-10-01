@@ -98,7 +98,7 @@ class DropDownActionColumn extends Column
         $firstKey = current(array_keys($this->items));
         $mainBtn = $this->items[$firstKey];
 
-        $result .= Html::a($mainBtn['label'], array_merge($mainBtn['url'], [$model->primaryKey()[0] => $key]), array_merge(
+        $result .= Html::a($mainBtn['label'], array_merge($mainBtn['url'], [$model->primaryKey()[0] => $model->getPrimaryKey()]), array_merge(
                 ['class' => 'btn btn-default btn-sm'],
                 isset($mainBtn['linkOptions']) ? $mainBtn['linkOptions'] : [])
         );
@@ -137,7 +137,7 @@ class DropDownActionColumn extends Column
                         'li',
                         Html::a(
                             $item['label'],
-                            array_merge($item['url'], [$model->primaryKey()[0] => $key]),
+                            array_merge($item['url'], [$model->primaryKey()[0] => $model->getPrimaryKey()]),
                             (isset($item['linkOptions']) ? $item['linkOptions'] : [])
                         ),
                         (isset($item['options']) ? $item['options'] : []));
