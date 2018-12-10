@@ -138,7 +138,7 @@ class DropDownActionColumn extends Column
                         Html::a(
                             $item['label'],
                             array_merge($item['url'], [$model->primaryKey()[0] => $model->getPrimaryKey()]),
-                            (isset($item['linkOptions']) ? $item['linkOptions'] : [])
+                            (isset($item['linkOptions']) ? $item['linkOptions'] : ['class' => 'dropdown-item'])
                         ),
                         (isset($item['options']) ? $item['options'] : []));
                 }
